@@ -1,6 +1,7 @@
-package com.in28minutes.springboot.learn_jpa_and_hybernate.course.jdbc;
+package com.in28minutes.springboot.learn_jpa_and_hybernate.course;
 
-import com.in28minutes.springboot.learn_jpa_and_hybernate.course.Course;
+import com.in28minutes.springboot.learn_jpa_and_hybernate.course.jdbc.CourseJdbcRepository;
+import com.in28minutes.springboot.learn_jpa_and_hybernate.course.jpa.CourseJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -8,8 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class CourseJdbcCommandLineRunner implements CommandLineRunner {
 
+//    @Autowired
+//    private CourseJdbcRepository repository;
+
     @Autowired
-    private CourseJdbcRepository repository;
+    private CourseJpaRepository repository;
 
     @Override
     public void run(String... args) throws Exception {
